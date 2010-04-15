@@ -1,15 +1,22 @@
 ORIG_PN="apache-ant"
-inherit ant
+inherit java
 
 
 HOMEPAGE="http://ant.apache.org/"
 SRC_URI="mirror://apache/ant/source/${ORIG_PN}-${PV}-src.tar.bz2"
 
-DISTCLEANFILES="lib/*.jar"
-
 # adds all jars to classpath
 ANT_BUILD_ARGS="-lib ${JAVA_DIR}"
 ANT_BUILD_TARGETS="main" # javadocs"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	export JAVA_HOME
+	export JAVAC
+	export JAVACMD=${JAVA}
+	./bootstrap.sh
+}
 
 src_install() {
 	cd ${B}
