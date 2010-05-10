@@ -1,0 +1,11 @@
+--- origsrc/apache-ant-1.8.1/build.xml	2010-04-30 17:05:05.000000000 -0500
++++ src/apache-ant-1.8.1/build.xml	2010-05-09 03:38:32.212239900 -0500
+@@ -120,7 +120,7 @@
+        ===================================================================
+   -->
+   <path id="classpath">
+-    <fileset dir="lib/optional" includes="*.jar"/>
++    <fileset dir="/usr/share/java/" includes="*.jar"/>
+   </path>
+ 
+   <path id="tests-classpath">

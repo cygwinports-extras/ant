@@ -1,0 +1,76 @@
+ant
+------------------------------------------
+Ant is a Java library and command-line tool. Ant's mission is to drive 
+processes described in build files as targets and extension points 
+dependent upon each other. The main known usage of Ant is the build of 
+Java applications. Ant supplies a number of built-in tasks allowing to 
+compile, assemble, test and run Java applications.
+
+For more information about this package, see the upstream documentation 
+in /usr/share/doc/ant.
+
+Runtime requirements:
+  jamvm-1.5.3-1
+(for optional tasks only)
+  java-antlr
+  java-bcel
+  java-commons-logging
+  java-commons-net
+  java-jakarta-oro
+  java-jakarta-regexp
+  java-jdepend
+  java-jsch
+  java-junit
+  java-log4j
+  java-mail
+  java-xalan
+  java-xerces2
+  java-xml-commons-external
+  java-xml-commons-resolver
+  java-xml-commons-which
+
+Build requirements:
+  cygport-0.9.84-1
+  ecj-3.3.2-1
+  fastjar-0.98-2
+  jamvm-1.5.3-1
+
+License:
+  Apache-2.0
+
+Canonical homepage:
+  http://ant.apache.org/
+
+Canonical download:
+  http://www.apache.org/dist/ant/source/
+
+------------------------------------------
+
+Build instructions:
+  unpack ant-1.8.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ant-1.8.1-X.cygport all
+
+This will create:
+  /usr/src/ant-1.8.1-X-src.tar.bz2
+  /usr/src/ant-1.8.1-X.tar.bz2
+
+Or use 'cygport ant-1.8.1-X.cygport prep' to get a patched source 
+directory.
+
+To find out the files included in the binary distribution, you can
+use "cygcheck -l PKG", or browse the listing for the appropriate version
+at <http://cygwin.com/packages/>.
+
+------------------------------------------
+
+Port Notes:
+
+----- version 1.8.1-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
