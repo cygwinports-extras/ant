@@ -1,5 +1,5 @@
 category: Devel Java
-requires: java-antlr java-bcel java-commons-logging java-commons-net java-jakarta-oro java-jakarta-regexp java-jdepend java-jsch java-junit java-log4j java-mail java-xalan java-xerces2 java-xml-commons-external java-xml-commons-resolver java-xml-commons-which
+requires: java-antlr java-bcel java-bsf java-commons-logging java-commons-net java-jakarta-oro java-jakarta-regexp java-jdepend java-jsch java-junit java-log4j java-mail java-xalan java-xerces2 java-xml-commons-external java-xml-commons-resolver java-xml-commons-which
 sdesc: "Java build tool"
 ldesc: "Ant is a Java library and command-line tool. Ant's mission is to 
 drive processes described in build files as targets and extension points 

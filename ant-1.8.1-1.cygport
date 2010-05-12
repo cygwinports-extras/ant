@@ -1,4 +1,4 @@
-JAVA_CLASSPATH="antlr.jar:bcel.jar:commons-logging.jar:commons-net.jar:gnumail.jar:jakarta-oro.jar:jakarta-regexp.jar:jdepend.jar:jsch.jar:junit.jar:log4j.jar:resolver.jar:which.jar:xalan.jar:xercesImpl.jar:xml-apis.jar"
+JAVA_CLASSPATH="antlr.jar:bcel.jar:bsf.jar:commons-logging.jar:commons-net.jar:gnumail.jar:jakarta-oro.jar:jakarta-regexp.jar:jdepend.jar:jsch.jar:junit.jar:log4j.jar:resolver.jar:which.jar:xalan.jar:xercesImpl.jar:xml-apis.jar"
 ORIG_PN="apache-ant"
 inherit java
 
