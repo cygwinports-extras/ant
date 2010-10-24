@@ -10,7 +10,7 @@ For more information about this package, see the upstream documentation
 in /usr/share/doc/ant.
 
 Runtime requirements:
-  jamvm-1.5.3-1
+  jamvm-1.5.3-3
 (for optional tasks only)
   java-antlr
   java-bcel
@@ -31,10 +31,9 @@ Runtime requirements:
   java-xml-commons-which
 
 Build requirements:
-  cygport-0.9.84-1
-  ecj-3.3.2-1
+  cygport-0.10.1-1
   fastjar-0.98-2
-  jamvm-1.5.3-1
+  jamvm-1.5.3-3
 
 License:
   Apache-2.0
@@ -57,6 +56,21 @@ Build instructions:
 This will create:
   /usr/src/ant-1.8.1-X-src.tar.bz2
   /usr/src/ant-1.8.1-X.tar.bz2
+  /usr/src/ant-antlr-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-bcel-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-bsf-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-log4j-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-oro-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-regexp-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-resolver-1.8.1-X.tar.bz2
+  /usr/src/ant-apache-xalan2-1.8.1-X.tar.bz2
+  /usr/src/ant-commons-logging-1.8.1-X.tar.bz2
+  /usr/src/ant-commons-net-1.8.1-X.tar.bz2
+  /usr/src/ant-javamail-1.8.1-X.tar.bz2
+  /usr/src/ant-jdepend-1.8.1-X.tar.bz2
+  /usr/src/ant-jsch-1.8.1-X.tar.bz2
+  /usr/src/ant-junit-1.8.1-X.tar.bz2
+  /usr/src/ant-testutil-1.8.1-X.tar.bz2
 
 Or use 'cygport ant-1.8.1-X.cygport prep' to get a patched source 
 directory.
@@ -68,6 +82,9 @@ at <http://cygwin.com/packages/>.
 ------------------------------------------
 
 Port Notes:
+
+----- version 1.8.1-2 -----
+Broke out optional tasks into separate packages.
 
 ----- version 1.8.1-1 -----
 Initial release for Cygwin 1.7.
