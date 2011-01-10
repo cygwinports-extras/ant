@@ -1,4 +1,4 @@
-JAVA_CLASSPATH="antlr.jar:bcel.jar:bsf.jar:commons-logging.jar:commons-net.jar:jakarta-oro.jar:jakarta-regexp.jar:jdepend.jar:jsch.jar:junit.jar:log4j.jar:mail.jar:resolver.jar:which.jar:xalan.jar:xercesImpl.jar:xml-apis.jar"
+JAVA_CLASSPATH="antlr.jar:bcel.jar:bsf.jar:commons-logging.jar:commons-net.jar:jakarta-oro.jar:jakarta-regexp.jar:jdepend.jar:jsch.jar:junit.jar:junit4.jar:log4j.jar:mail.jar:resolver.jar:which.jar:xalan.jar:xercesImpl.jar:xml-apis.jar"
 ORIG_PN="apache-ant"
 inherit java
 
@@ -8,6 +8,7 @@ SRC_URI="http://archive.apache.org/dist/ant/source/${ORIG_PN}-${PV}-src.tar.bz2"
 PATCH_URI="
 	1.7.1-cygwin.patch
 	1.8.1-optional-deps.patch
+	1.8.2-maxmemory.patch
 "
 
 # we don't inherit ant, otherwise ant must already be installed
@@ -15,7 +16,7 @@ ANT_HOME="/usr/share/ant"
 
 for task in antlr apache-bcel apache-bsf apache-log4j apache-oro apache-regexp \
             apache-resolver apache-xalan2 commons-logging commons-net javamail \
-            jdepend jsch junit testutil
+            jdepend jsch junit junit4 testutil
 do
 	PKG_NAMES+=" ant-${task}"
 	declare ant_${task/-/_}_CONTENTS="${ANT_HOME#/}/lib/ant-${task}.jar"
@@ -30,7 +31,7 @@ src_compile() {
 	cd ${B}
 	export JAVA_HOME JAVAC JAVACMD=${JAVA}
 	./bootstrap.sh || error "compile failed"
-	cygjava -classpath build/classes:${CLASSPATH} -Dant.home=. org.apache.tools.ant.Main javadocs
+	ANT_HOME=${B}/build cygjava -jar build/lib/ant-launcher.jar javadocs
 }
 
 src_install() {

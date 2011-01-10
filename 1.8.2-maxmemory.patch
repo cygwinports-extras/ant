@@ -1,0 +1,11 @@
+--- origsrc/apache-ant-1.8.2/build.xml	2010-12-31 01:26:58.044357100 -0600
++++ src/apache-ant-1.8.2/build.xml	2010-12-31 05:49:02.038119800 -0600
+@@ -1358,7 +1358,7 @@
+   <target name="-javadocs.do" if="jdk1.5+" unless="javadoc.notrequired">
+     <mkdir dir="${build.javadocs}"/>
+     <javadoc useexternalfile="yes"
+-      maxmemory="1000M"	
++      maxmemory="512M"
+       destdir="${build.javadocs}"
+       author="true"
+       version="true"
