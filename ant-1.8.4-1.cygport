@@ -2,7 +2,13 @@ JAVA_CLASSPATH="antlr.jar:bcel.jar:bsf.jar:commons-logging.jar:commons-net.jar:j
 ORIG_PN="apache-ant"
 inherit java
 
-DESCRIPTION="XML-based build tool for Java packages"
+CATEGORY="Java"
+SUMMARY="Build tool for Java packages"
+DESCRIPTION="Ant is a Java library and command-line tool. Ant's mission is to
+drive processes described in build files as targets and extension points
+dependent upon each other. The main known usage of Ant is the build of Java
+applications. Ant supplies a number of built-in tasks allowing to compile,
+assemble, test and run Java applications."
 HOMEPAGE="http://ant.apache.org/"
 SRC_URI="http://archive.apache.org/dist/ant/source/${ORIG_PN}-${PV}-src.tar.bz2"
 PATCH_URI="
